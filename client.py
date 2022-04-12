@@ -17,11 +17,9 @@ class Client():
 			except KeyboardInterrupt:
 				continue
 			except Exception as e:
-				print(f"Error connecting {connect}| Sleep 10 seconds")
 				sleep(10)
 
 	def exit_gracefully(self,signum, frame):
-		print("\nExiting....")
 		self.stop = True
 		self.run = False
 		self.sock.close()
